@@ -1,94 +1,38 @@
-const restaurants = [
-    {
-        id: 1,
-        name: 'Pizza Palace',
-        image: 'https://via.placeholder.com/200x150',
-        menu: [
-            { name: 'Pepperoni Pizza', price: 12.99 },
-            { name: 'Veggie Pizza', price: 10.99 },
-            { name: 'Cheese Pizza', price: 9.99 }
-        ]
-    },
-    {
-        id: 2,
-        name: 'Burger House',
-        image: 'https://via.placeholder.com/200x150',
-        menu: [
-            { name: 'Cheeseburger', price: 8.99 },
-            { name: 'Bacon Burger', price: 9.99 },
-            { name: 'Veggie Burger', price: 7.99 }
-        ]
-    },
-    {
-        id: 3,
-        name: 'Sushi World',
-        image: 'https://via.placeholder.com/200x150',
-        menu: [
-            { name: 'California Roll', price: 11.99 },
-            { name: 'Spicy Tuna Roll', price: 13.99 },
-            { name: 'Salmon Nigiri', price: 15.99 }
-        ]
-    }
-];
 
-let cart = [];
+        // Select the button using its ID
+        const button = document.getElementById('myButton');
 
-function loadRestaurants() {
-    const restaurantList = document.getElementById('restaurant-list');
-    restaurants.forEach(restaurant => {
-        const restaurantCard = document.createElement('div');
-        restaurantCard.classList.add('restaurant-card');
-        restaurantCard.innerHTML = `
-            <img src="${restaurant.image}" alt="${restaurant.name}">
-            <h3>${restaurant.name}</h3>
-            <div class="menu-items">
-                ${restaurant.menu.map(item => `
-                    <p>${item.name} - $${item.price.toFixed(2)}</p>
-                    <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>
-                `).join('')}
-            </div>
-        `;
-        restaurantList.appendChild(restaurantCard);
-    });
-}
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            window.location.href = 'More Pages/third_page.html';
 
-function addToCart(itemName, itemPrice) {
-    cart.push({ itemName, itemPrice });
-    updateCart();
-}
+        });
+        const button1 = document.getElementById('myButton1');
 
-function updateCart() {
-    const cartItemsContainer = document.getElementById('cart-items');
-    const cartCount = document.getElementById('cart-count');
-    const cartTotal = document.getElementById('cart-total');
+        // Add a click event listener to the button
+        button1.addEventListener('click', function() {
+            window.location.href = 'More Pages/third_page.html';
 
-    cartItemsContainer.innerHTML = '';
-    let total = 0;
+        });
+        const button2 = document.getElementById('myButton2');
 
-    cart.forEach((item, index) => {
-        const cartItem = document.createElement('div');
-        cartItem.innerHTML = `
-            <p>${item.itemName} - $${item.itemPrice.toFixed(2)}</p>
-            <button onclick="removeFromCart(${index})">Remove</button>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-        total += item.itemPrice;
-    });
+        // Add a click event listener to the button
+        button2.addEventListener('click', function() {
+            window.location.href = 'More Pages/second_page.html';
 
-    cartTotal.innerText = `Total: $${total.toFixed(2)}`;
-    cartCount.innerText = cart.length;
-}
+        });
+        const button3 = document.getElementById('myButton3');
 
-function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCart();
-}
+        // Add a click event listener to the button
+        button3.addEventListener('click', function() {
+            window.location.href = 'More Pages/second_page.html';
 
-document.getElementById('checkout-btn').addEventListener('click', () => {
-    alert(`Thank you for your order! Your total is $${cart.reduce((sum, item) => sum + item.itemPrice, 0).toFixed(2)}`);
-    cart = [];
-    updateCart();
-});
+        });
+        const button4 = document.getElementById('myButton4');
 
-// Initialize
-loadRestaurants();
+        // Add a click event listener to the button
+        button4.addEventListener('click', function() {
+            window.location.href = 'More Pages/second_page.html';
+
+        });
+        

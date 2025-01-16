@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: goldenrod;
+        }
+        fieldset {
+            width: 280px;
+            height: 280px;
+            background-color: rgba(0, 255, 255, 0.8);
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #btn1 {
+            border: 2px solid red;
+            width: 100%;
+            padding: 10px;
+            background-color: #f44336;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #btn1:hover {
+            background-color: #e57373;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Login to Skill Sphere</h2>
+        <form onsubmit="return validateLoginForm()">
+            <fieldset>
+                <legend style="text-align: center;"><b>Login</b></legend>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <br><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <br><br>
+                <input type="submit" id="btn1" value="Login">
+            </fieldset>
+        </form>
+
+        <div class="signup-link">
+            <p><b>Don't have an account?</b> <a href="signup.html">Sign up here</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function validateLoginForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "") {
+                alert("Please enter your username.");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            // Check if the username and password are correct (this is a basic example)
+            if (username === 'Garv' && password === '04') {
+                window.location.href = 'person.html';  // Redirect to user page
+                alert("Welcome user!");
+                return false;  // Prevent the form from submitting
+            } else {
+                alert("Incorrect username or password.");
+                return false;  // Prevent form submission if credentials are incorrect
+            }
+        }
+    </script>
+</body>
+</html>

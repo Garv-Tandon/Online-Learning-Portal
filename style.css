@@ -1,95 +1,140 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f7f7f7;
-}
-
-header {
-    background-color: #ff6b6b;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-#cart-container {
-    position: relative;
-}
-
-#cart-icon {
-    width: 40px;
-    cursor: pointer;
-}
-
-#cart-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    color: #ff6b6b;
-    border-radius: 50%;
-    padding: 2px 8px;
-    font-size: 14px;
-}
-
-.restaurants-section {
-    padding: 20px;
-}
-
-.restaurant-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.restaurant-card {
-    background-color: white;
+.header {
+    background-color: #007bff;
+    color: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
     text-align: center;
 }
 
-.restaurant-card img {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
+.navbar a:hover {
+    background-color: #575757;
 }
 
-button {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #e65a5a;
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cart-section {
+.sidebar h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.content {
+    width: 75%;
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#cart-items {
-    margin-bottom: 20px;
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
-#cart-total {
-    font-size: 18px;
+.course-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h4 {
+    margin: 0;
+}
+
+.course-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 30px;
+}
+
+.header .title {
+    display: inline-block;
+    animation: colorPulse 3s infinite ease-in-out;
     font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 36px;
 }
+
+@keyframes colorPulse {
+    0% {
+        color: #ffffff;
+    
+    }
+    50% {
+        font-size:20px;
+        color: #ffd700;
+    }
+    100%
+    {
+        color:#333
+    }
+}
+
+
