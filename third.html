@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background-color: #e7f3ff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .project {
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Web Development</h1>
+</header>
+
+<section>
+    <h2>Introduction</h2>
+    <p>Welcome to my web development page! Here you can find information about my skills, projects, and how to contact me.</p>
+</section>
+
+<section>
+    <h2>Skills You will learn</h2>
+    <ul class="skills-list">
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Responsive Design</li>
+        <li>Version Control (Git)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Projects You will do</h2>
+    <div class="project">
+        <h3>Project 1: Portfolio Website</h3>
+        <p>A personal portfolio website showcasing my work and skills.</p>
+    </div>
+    <div class="project">
+        <h3>Project 2: E-Commerce Platform</h3>
+        <p>An online store with product listings, a shopping cart, and payment integration.</p>
+    </div>
+    <div class="project">
+        <h3>Project 3: Blogging Platform</h3>
+        <p>A platform for users to create and share their own blogs.</p>
+    </div>
+</section>
+<section>
+    <h2>Resources for reference</h2>
+        <div class="resources">
+            <h3>Books</h3>
+            <ul>
+                <li><em>Eloquent JavaScript</em> by Marijn Haverbeke</li>
+                <li><em>Learning Web Design: A Beginner's Guide to HTML, CSS, JavaScript, and Web Graphics</em> by Jennifer Niederst Robbins</li>
+            </ul>
+        </div>
+</section>
+
+<section>
+    <h2>Contact Me</h2>
+    <form class="contact-form" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</body>
+</html>

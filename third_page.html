@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container .payment-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container .payment-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-container .payment-link a:hover {
+            color: #0056b3;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Course Registration</h1>
+
+    <div class="form-container">
+        <h2>Contact Us at +91-9632457551 | Skill Sphere, Gurgaon</h2>
+        <form id="registrationForm" method="POST" onsubmit="return validateForm()">
+            <label for="name">Enter your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+            <div id="nameError" class="error"></div>
+
+            <label for="email">Enter your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+            <div id="emailError" class="error"></div>
+
+            <label for="phone">Enter your Phone Number:</label>
+            <input type="text" id="phone" name="phone" required placeholder="Your Phone Number">
+            <div id="phoneError" class="error"></div>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">--Select a Course--</option>
+                <option value="Course1">Course 1</option>
+                <option value="Course2">Course 2</option>
+                <option value="Course3">Course 3</option>
+            </select>
+            <div id="courseError" class="error"></div>
+
+            <label for="message">Enter your Message (Optional):</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        
+    </div>
+
+    <div class="back-link">
+        <a href="Project.html">Go back to Main Page</a>
+    </div>
+
+    <script>
+        // Form validation function
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+            document.getElementById("courseError").innerHTML = "";
+
+            // Name validation (only letters)
+            const name = document.getElementById("name").value;
+            const nameRegex = /^[A-Za-z\s]+$/;
+            if (!name.match(nameRegex)) {
+                document.getElementById("nameError").innerHTML = "Please enter a valid name (letters only).";
+                isValid = false;
+            }
+
+            // Email validation (basic pattern check)
+            const email = document.getElementById("email").value;
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.match(emailRegex)) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Phone validation (10 digits)
+            const phone = document.getElementById("phone").value;
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phone.match(phoneRegex)) {
+                document.getElementById("phoneError").innerHTML = "Please enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Course selection validation
+            const course = document.getElementById("course").value;
+            if (course === "") {
+                document.getElementById("courseError").innerHTML = "Please select a course.";
+                isValid = false;
+            }
+
+            return isValid; // Allow form submission if all fields are valid
+        }
+    </script>
+
+</body>
+</html>

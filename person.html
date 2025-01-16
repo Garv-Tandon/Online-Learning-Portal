@@ -1,0 +1,259 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .module {
+            margin: 20px 0;
+        }
+        .module-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .progress-bar-container {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            width: 100%;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .progress-bar {
+            height: 100%;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        .completed {
+            background-color: #4CAF50;
+        }
+        .in-progress {
+            background-color: #FFC107;
+        }
+        .not-started {
+            background-color: #f44336;
+        }
+        .completion-percentage {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .script-container {
+            margin-top: 10px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .script-title {
+            font-weight: bold;
+        }
+        .topic-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .topic-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Web Development Course Progress</h1>
+
+    <!-- Module 1: HTML Basics -->
+    <div class="module">
+        <div class="module-title">Module 1: HTML Basics</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar not-started" id="progress-bar-1" style="width: 0%;">0%</div>
+        </div>
+        
+        <div class="script-container" id="script-1">
+            <div class="script-title">HTML Basics - Topics:</div>
+            <ul>
+                <li>
+                    <p><strong>Introduction to HTML</strong></p>
+                    <details>
+                        <summary>HTML Introduction</summary>
+                        <p><strong>HTML (Hypertext Markup Language)</strong> is the standard markup language used to create web pages.</p>
+                        <p>HTML structures the content and elements of a web page. Elements are defined using tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, and more.</p>
+                    </details>
+                    <button class="topic-button" id="button-1-1" onclick="completeTopic(1, 1)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>HTML Tags and Attributes</strong></p>
+                    <details>
+                        <summary>HTML Tags</summary>
+                        <p>Tags are the building blocks of an HTML document. Common tags include:</p>
+                        <ul>
+                            <li><code>&lt;p&gt;</code> for paragraphs</li>
+                            <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings</li>
+                            <li><code>&lt;a&gt;</code> for links</li>
+                            <li><code>&lt;img&gt;</code> for images</li>
+                        </ul>
+                        <p>Tags can include attributes that define specific properties. For example, <code>&lt;a href="URL"&gt;</code> defines the destination of a link.</p>
+                    </details>
+                    <button class="topic-button" id="button-1-2" onclick="completeTopic(1, 2)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>Creating Links and Images</strong></p>
+                    <details>
+                        <summary>Links & Images</summary>
+                        <p><strong>Links:</strong> Links are created using the <code>&lt;a&gt;</code> tag. For example:</p>
+                        <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+                        <p><strong>Images:</strong> Images are embedded using the <code>&lt;img&gt;</code> tag:</p>
+                        <pre><code>&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+                    </details>
+                    <button class="topic-button" id="button-1-3" onclick="completeTopic(1, 3)">Mark as Completed</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Module 2: CSS Styling -->
+    <div class="module">
+        <div class="module-title">Module 2: CSS Styling</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar not-started" id="progress-bar-2" style="width: 0%;">0%</div>
+        </div>
+        
+        <div class="script-container" id="script-2">
+            <div class="script-title">CSS Basics - Topics:</div>
+            <ul>
+                <li>
+                    <p><strong>Introduction to CSS</strong></p>
+                    <details>
+                        <summary>CSS Basics</summary>
+                        <p><strong>CSS (Cascading Style Sheets)</strong> is used to style the layout and appearance of web pages. It defines how HTML elements are displayed.</p>
+                        <p>Common styles include setting colors, fonts, margins, paddings, and positioning of elements.</p>
+                    </details>
+                    <button class="topic-button" id="button-2-1" onclick="completeTopic(2, 1)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>CSS Selectors and Properties</strong></p>
+                    <details>
+                        <summary>Selectors & Properties</summary>
+                        <p>Selectors target HTML elements to apply styles. For example, <code>p { color: red; }</code> sets the text color of paragraphs to red.</p>
+                        <p>There are different types of selectors: element selectors, class selectors (<code>.classname</code>), and ID selectors (<code>#id</code>).</p>
+                    </details>
+                    <button class="topic-button" id="button-2-2" onclick="completeTopic(2, 2)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>CSS Layout and Positioning</strong></p>
+                    <details>
+                        <summary>Layout & Positioning</summary>
+                        <p>CSS allows you to arrange elements in different ways, such as using Flexbox or Grid. You can also position elements with the <code>position</code> property (static, relative, absolute, fixed).</p>
+                    </details>
+                    <button class="topic-button" id="button-2-3" onclick="completeTopic(2, 3)">Mark as Completed</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Module 3: JavaScript Basics -->
+    <div class="module">
+        <div class="module-title">Module 3: JavaScript Basics</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar not-started" id="progress-bar-3" style="width: 0%;">0%</div>
+        </div>
+        
+        <div class="script-container" id="script-3">
+            <div class="script-title">JavaScript Basics - Topics:</div>
+            <ul>
+                <li>
+                    <p><strong>Introduction to JavaScript</strong></p>
+                    <details>
+                        <summary>JavaScript Introduction</summary>
+                        <p><strong>JavaScript</strong> is a programming language used to create interactive effects and dynamic behavior on web pages. It can manipulate HTML content and interact with users.</p>
+                    </details>
+                    <button class="topic-button" id="button-3-1" onclick="completeTopic(3, 1)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>Variables and Data Types</strong></p>
+                    <details>
+                        <summary>Variables & Data Types</summary>
+                        <p>JavaScript variables store data, and they can be of different types: strings, numbers, booleans, arrays, objects, etc.</p>
+                        <pre><code>let name = "John";</code></pre>
+                    </details>
+                    <button class="topic-button" id="button-3-2" onclick="completeTopic(3, 2)">Mark as Completed</button>
+                </li>
+                <li>
+                    <p><strong>Functions and Loops</strong></p>
+                    <details>
+                        <summary>Functions & Loops</summary>
+                        <p>Functions are reusable blocks of code. Loops help iterate through data. For example:</p>
+                        <pre><code>function greet(name) { console.log("Hello " + name); }</code></pre>
+                    </details>
+                    <button class="topic-button" id="button-3-3" onclick="completeTopic(3, 3)">Mark as Completed</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Completion Percentage -->
+    <div class="completion-percentage" id="completion-percentage">
+        Completion: 0%
+    </div>
+</div>
+
+<script>
+    const totalTopics = 9; // Total number of topics
+
+    let completedTopics = 0; // Track number of completed topics
+
+    function completeTopic(module, topic) {
+        const progressBar = document.getElementById(`progress-bar-${module}`);
+        const button = document.getElementById(`button-${module}-${topic}`);
+        
+        // Mark the topic as completed
+        button.disabled = true;
+        button.innerText = "Completed";
+        
+        // Update the progress bar
+        completedTopics++;
+        const percentage = (completedTopics / totalTopics) * 100;
+        progressBar.style.width = `${percentage}%`;
+        progressBar.innerText = `${Math.round(percentage)}%`;
+        
+        // Update the completion percentage
+        document.getElementById('completion-percentage').innerText = `Completion: ${Math.round(percentage)}%`;
+        
+        // Update the color of progress bar
+        if (percentage === 100) {
+            progressBar.classList.remove("not-started", "in-progress");
+            progressBar.classList.add("completed");
+        } else if (percentage > 0) {
+            progressBar.classList.remove("not-started");
+            progressBar.classList.add("in-progress");
+        }
+    }
+</script>
+
+</body>
+</html>

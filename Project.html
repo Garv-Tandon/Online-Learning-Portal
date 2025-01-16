@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .content {
+            width: 75%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .course-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .course-info {
+            flex: 1;
+        }
+
+        .course-info h4 {
+            margin: 0;
+        }
+
+        .course-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .header .title {
+            display: inline-block;
+            animation: colorPulse 3s infinite ease-in-out;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        @keyframes colorPulse {
+            0% {
+                color: #ffffff;
+            
+            }
+            50% {
+                color: #ffd700;
+            }
+            100%
+            {
+                color:#333
+            }
+        }
+        
+        
+        
+
+        
+
+    </style>
+</head>
+
+
+    <div class="header">
+        <span class="title">Welcome to Skill Sphere!</span>
+    </div>
+
+    <div class="navbar">
+        <a href="Project.html">Dashboard</a>
+        <a href="nineth.html">Course Reviews</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="login.html">Login</a>
+
+    </div>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h3>More Details Here</h3>
+            <ul>
+                <li><a href="third.html">Web Development</a></li>
+                <li><a href="fourth.html">Data Science</a></li>
+                <li><a href="fifth.html">AI & Machine Learning</a></li>
+                <li><a href="sixth.html">Cloud Computing</a></li>
+                <li><a href="seventh.html">Digital Marketing</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="content">
+            <h2>Available Courses</h2>
+            <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Paid Courses</h2>
+            <div class="course-card">
+                <img src="web_development.jpg" alt="Web Development">
+                <div class="course-info">
+                    <h4>Complete Web Development Bootcamp</h4>
+                    <p>Learn HTML, CSS, JavaScript, React, and more in this comprehensive course.</p>
+                    <button id="myButton4">Enroll Now</button>
+                    <h4> &#8377;2000</h4>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="data_science.jpg" alt="Data Science">
+                <div class="course-info">
+                    <h4>Data Science with Python</h4>
+                    <p>Master Python, Data Visualization, and Machine Learning techniques.</p>
+                    <button id="myButton3">Enroll Now</button>
+                    <h4> &#8377;2200</h4>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="Ai ml.jpg" alt="AI & ML">
+                <div class="course-info">
+                    <h4>AI & Machine Learning Fundamentals</h4>
+                    <p>Get started with AI & ML by learning the basics of algorithms and data.</p>
+                    <button id="myButton2">Enroll Now</button>
+                    <h4> &#8377;3500</h4>
+                </div>
+            </div>
+            <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Free Courses</h2>
+            <div class="course-card">
+                <img src="Cloud_Computing.jpg" alt="Cloud Computing">
+                <div class="course-info">
+                    <h4>Cloud Computing with AWS</h4>
+                    <p>Understand the basics of AWS and cloud infrastructure deployment.</p>
+                    <button id="myButton1">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="Digital_Marketing.jpg" alt="Digital Marketing">
+                <div class="course-info">
+                    <h4>Digital marketing promotes products or services</h4>
+                    <p>using digital channels like social media, search engines, and email.</p>
+                    <button id="myButton">Enroll Now</button> 
+                </div>
+            </div>
+            
+        
+        </div>
+        </div>
+    
+
+   
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 Online Learning Platform. All Rights Reserved.
+    </div>
+    
+
+    <script>
+        // Select the button using its ID
+        const button = document.getElementById('myButton');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            window.location.href = 'third_page.html';
+
+        });
+        const button1 = document.getElementById('myButton1');
+
+        // Add a click event listener to the button
+        button1.addEventListener('click', function() {
+            window.location.href = 'third_page.html';
+
+        });
+        const button2 = document.getElementById('myButton2');
+
+        // Add a click event listener to the button
+        button2.addEventListener('click', function() {
+            window.location.href = 'second_page.html';
+
+        });
+        const button3 = document.getElementById('myButton3');
+
+        // Add a click event listener to the button
+        button3.addEventListener('click', function() {
+            window.location.href = 'second_page.html';
+
+        });
+        const button4 = document.getElementById('myButton4');
+
+        // Add a click event listener to the button
+        button4.addEventListener('click', function() {
+            window.location.href = 'second_page.html';
+
+        });
+        
+    </script>
+    
+</body>
+</html>

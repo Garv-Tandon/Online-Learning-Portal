@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            body {
+                background-image: url("learning.jpg");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+            }
+            .signup-container {
+                width: 300px;
+                padding: 20px;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin-top: 100px;
+            }
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                color: #333;
+            }
+            input[type="text"], input[type="password"], input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            .login-link {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .login-link a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            .login-link a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <form id="signupForm" onsubmit="return validateForm()">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Create a username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+                <input type="submit" value="Sign Up">
+            </form>
+            <div class="login-link">
+                <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            </div>
+        </div>
+
+        <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                // Check if name is entered and doesn't contain numbers or special characters
+                var namePattern = /^[a-zA-Z\s]+$/; // Only allows alphabets and spaces
+                if (name == "") {
+                    alert("Please enter your full name.");
+                    return false;
+                } else if (!name.match(namePattern)) {
+                    alert("Name should only contain letters and spaces.");
+                    return false;
+                }
+
+                // Check if email is valid
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!email.match(emailPattern)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+
+                // Check if username is entered
+                if (username == "") {
+                    alert("Please create a username.");
+                    return false;
+                }
+
+                // Check if password is entered
+                if (password == "") {
+                    alert("Please create a password.");
+                    return false;
+                }
+
+                // Check if password is strong (at least 8 characters)
+                if (password.length < 8) {
+                    alert("Password must be at least 8 characters.");
+                    return false;
+                }
+
+                // Check if passwords match
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                const arr=[];
+                const arr1=[];
+                arr.push(username);
+                arr1.push(password);
+                alert(arr);
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
